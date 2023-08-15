@@ -1,0 +1,12 @@
+Conditions for maxSubArray to return the greatest sum:
+
+The sub array must have a length greater than or equal to 1.
+The sub array must be comprised of either positive numbers or only a single negative.
+
+Conditions for excluding a number in an array:
+
+If the following number is a negative number and its sum the current number is less than zero then either the current number and whatever values before it are the greatest sum or the values after that are the geatest sum,
+essentially we may be able to treat it as a pivot point. (Quicksort algorithm?)
+
+
+[22, 10, -11, 1, -2, 3, -7, 6]
