@@ -8,5 +8,10 @@ Conditions for excluding a number in an array:
 If the following number is a negative number and its sum the current number is less than zero then either the current number and whatever values before it are the greatest sum or the values after that are the geatest sum,
 essentially we may be able to treat it as a pivot point. (Quicksort algorithm?)
 
+Using this pivot algorithm we run into one problem, it keeps on cutting off subArrays every time it pivots down to the bottom meaning we may lose a greater valued subArray, to fix this issue we need our base case to
+add the current sum or num to the sums array, return the current sum, and add it to the preceeding pivot point and whatever values were on the opposite side of that pivot point. My thoughts are, we take the index of the current
+pivot point, and if its less than the previous pivot point, we simply call the sum() method on the array in the form sum(nums[currentPivot:previousPivot]) and then add that to the array, if the previous pivot index is less than the current,
+then we do the opposite -> (sum(nums[previousPivot:currentPivot])) and add it to the sums array.
+
 
 [22, 10, -11, 1, -2, 3, -7, 6]
