@@ -21,12 +21,6 @@ def maxSubArray(nums):
                     quickSort(nums[pivot + 1:], sums)
             return sums
 
-        # sums = quickSort(nums)
-        # greatestSum = max(sums)
-        # return greatestSum
-        return quickSort(nums)
-
-nums = [31,-41,59,26,-53,58,97,-93,-23,84]
-sums = maxSubArray(nums)
-print(sums)
-
+        sums = quickSort(nums)
+        greatestSum = max(sums)
+        return greatestSum
